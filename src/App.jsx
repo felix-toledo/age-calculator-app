@@ -11,7 +11,7 @@ function App() {
   const [months, setMonths] = useState(0);
   const [days, setDays] = useState(0);
 
-  function calculate(day, month, year){
+  function calculate(dateToCalculate){
      const actualYear = new Date().getFullYear();
      console.log(actualYear);
      const actualMonth = new Date().getMonth()+1;
@@ -19,17 +19,27 @@ function App() {
      const actualDay = new Date().getDate();
      console.log(actualDay); 
      
-     const newMonths = actualMonth - month;
-     const newDays = actualDay - day;
-     if(actualMonth > month){
-      const newYears = actualYear - year - 1;
-      setYears(newYears);
+     var newAge = actualYear - dateToCalculate[2]
+     var newMonth = 0
+     var newDay = 0
+     
+     if(actualMonth <= dateToCalculate[1] && actualDay < dateToCalculate[0])
+     {
+        newAge--;
+        newMonth = 12 - dateToCalculate[1] + actualMonth - 1;
+        newDay = 30 + actualDay - dateToCalculate[0];
+     } else if(actualMonth<dateToCalculate[1]){
+      newAge--;
+      newMonth = 12+actualMonth-dateToCalculate[1];
+      newDay = actualDay-dateToCalculate[0];
     } else {
-      const newYears = actualYear - year;
-      setYears(newYears);
-    }
-     setMonths(newMonths);
-     setDays(newDays);
+      newMonth = actualMonth - dateToCalculate[1];
+      newDay = actualDay - dateToCalculate[0];
+    }     
+      
+     setYears(newAge);
+     setMonths(newMonth);
+     setDays(newDay);
   }
 
   return (
