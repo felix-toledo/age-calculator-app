@@ -1,9 +1,10 @@
 import {useState} from 'react';
 import './MyBirthday.css'
 
-export default function MyBirthday({calculate}){
+export default function MyBirthday({isInFuture, calculate}){
 
      const [date, setDate] = useState([null, null, null]);
+     isInFuture ? alert('QUE HACES PAPA') : null;
 
 
      const check = (dateToCheck) =>{
