@@ -1,0 +1,25 @@
+.dayMonthYearContainer{
+     display: flex;
+     gap: 20px;
+}
+.dateInputCont{
+     display: flex;
+     flex-flow: column;
+     gap: 5px;
+} .dateInputCont span{
+     letter-spacing: 2px;
+     font-size: 14px;
+     color: hsl(0, 1%, 44%);
+} .dateInputCont input{
+     width: 140px;
+     font-size: 32px;
+     border-radius: 10px;
+     border: solid 1px hsl(0, 0%, 86%);
+     padding: 10px 15px;
+} .dateInputCont input:focus{
+     outline: 1px solid hsl(259, 100%, 65%);
+     caret-color: hsl(259, 100%, 65%);
+}.dateInputCont input:hover{
+     border-color: hsl(259, 100%, 65%);
+     cursor: pointer;
+}

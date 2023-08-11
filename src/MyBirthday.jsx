@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './MyBirthday.css'
 
 export default function MyBirthday({calculate}){
 
@@ -23,24 +24,23 @@ export default function MyBirthday({calculate}){
 
 
      return(
-          <>
-               <div className="dayMonthYearContainer">
-                    <div className="dayCont">
-                         <span>DAY</span>
-                         <input id="day" onChange={updateDate} placeholder='day'></input>
-                    </div>
-     
-                    <div className="dayCont">
-                         <span>MONTH</span>
-                         <input id="month" onChange={updateDate} placeholder='day'></input>
-                    </div>
+     <>
+          <div className="dayMonthYearContainer">
+               <div className="dateInputCont">
+                    <span>DAY</span>
+                    <input id="day" onChange={updateDate} placeholder='DD'></input>
+               </div>
 
-                    <div className="dayCont">
-                         <span>YEAR</span>
-                         <input id="year" onChange={updateDate} placeholder='day'></input>
-                    </div>
+               <div className="dateInputCont">
+                    <span>MONTH</span>
+                    <input id="month" onChange={updateDate} placeholder='MM'></input>
+               </div>
 
-      </div>
+               <div className="dateInputCont">
+                    <span>YEAR</span>
+                    <input id="year" onChange={updateDate} placeholder='YYYY'></input>
+               </div>
+          </div>
     </>
      )
 }

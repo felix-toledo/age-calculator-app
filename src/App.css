@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body{
+  background-color: hsl(0, 0%, 86%);
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appContainer{
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px 20px 30% 20px;
+  padding: 50px;
+}
+

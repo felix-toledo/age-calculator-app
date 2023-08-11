@@ -1,0 +1,9 @@
+.showingContainer{
+     font-size: 90px;
+} .showingContainer span{
+     color: hsl(259, 100%, 65%);
+} .text {
+     color: black !important;
+     font-style: italic;
+     font-weight: 800;
+}

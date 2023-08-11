@@ -7,9 +7,7 @@ import ShowAge from './ShowAge.jsx'
 
 function App() {
 
-  const [years, setYears] = useState(0);
-  const [months, setMonths] = useState(0);
-  const [days, setDays] = useState(0);
+  const [daysMonthsYears, setDaysMonthsYears] = useState(["--", "--", "--"])
 
   function calculate(dateToCalculate){
      const actualYear = new Date().getFullYear();
@@ -36,16 +34,14 @@ function App() {
       newDay = actualDay - dateToCalculate[0];
     }     
       
-     setYears(newAge);
-     setMonths(newMonth);
-     setDays(newDay);
+    setDaysMonthsYears([newAge, newMonth, newDay]);
   }
 
   return (
-  <>
+  <div className="appContainer">
     <MyBirthday calculate={calculate}/>  
-    <ShowAge years={years} months={months} days={days}/>
-  </>
+    <ShowAge daysMonthsYears={daysMonthsYears}/>
+  </div>
   )
 }
 
