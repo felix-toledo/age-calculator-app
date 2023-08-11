@@ -9,7 +9,7 @@ export default function ShowAge({daysMonthsYears}){
                const show = newDate < 10 ? "0" + newDate : newDate;
                return(
                     <div className='showingContainer' key={dma}>
-                         <div><span>{show} </span><span className='text'>{dma === 0 ? ' years' : dma === 1 ? ' months' : ' days'}</span></div>
+                         <div><span>{newDate} </span><span className='text'>{dma === 0 ? ' years' : dma === 1 ? ' months' : ' days'}</span></div>
                     </div>
                     )
                })

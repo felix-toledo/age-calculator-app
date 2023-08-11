@@ -31,7 +31,7 @@ function App() {
       newDay = actualDay-dateToCalculate[0];
     } else {
       newMonth = actualMonth - dateToCalculate[1];
-      newDay = actualDay - dateToCalculate[0];
+      newDay = actualDay >= dateToCalculate[0] ? actualDay - dateToCalculate[0] : 31 + actualDay - dateToCalculate[0];
     }     
       
     setDaysMonthsYears([newAge, newMonth, newDay]);
