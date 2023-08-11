@@ -14,8 +14,8 @@ export default function MyBirthday({calculate}){
      const updateDate = (e) => {
           const newDate = [...date]
           console.log(e.target.id);
-          e.target.id == "day" && e.target.value < 31 ? newDate[0] = e.target.value : null;
-          e.target.id == "month" && e.target.value < 12 ? newDate[1] = e.target.value : null;
+          e.target.id == "day" && e.target.value <= 31 ? newDate[0] = e.target.value : null;
+          e.target.id == "month" && e.target.value <= 12 ? newDate[1] = e.target.value : null;
           e.target.id == "year" ? newDate[2] = e.target.value : null;
 
           check(newDate)
