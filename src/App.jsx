@@ -15,8 +15,6 @@ function App() {
      const actualMonth = new Date().getMonth()+1;
      const actualDay = new Date().getDate();
 
-     
-
      var newAge = actualYear - dateToCalculate[2]
      var newMonth = 0
      var newDay = 0
@@ -37,13 +35,11 @@ function App() {
     }     
     
     if (newAge < 0) {
-      setIsInFuture(n => !n)
+      setIsInFuture(true)
     } else {
       setDaysMonthsYears([newAge, newMonth, newDay]);
-    }
-
-
-    
+      setIsInFuture(false)
+    }    
   }
 
   return (
