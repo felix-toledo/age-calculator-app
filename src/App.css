@@ -18,7 +18,7 @@ body{
 
 .appContainer{
   background-color: white;
-  width: 60%;
+  width: 50%;
   margin: auto;
   border-radius: 20px 20px 30% 20px;
   padding: 50px;
@@ -28,5 +28,10 @@ body{
   .appContainer{
        width: 90vws;
   }
+}@media screen and (max-width: 1440px) {
+  .appContainer{
+       width: 60%;
+  }
 }
+
 
