@@ -9,8 +9,6 @@ export default function MyBirthday({isInFuture, calculate}){
      const [validDay, setValidDay] = useState(true);
      const [validYear, setValidYear] = useState(true);
 
-     var hola;
-
      const check = (dateToCheck) =>{
           console.log(dateToCheck[0]);
           

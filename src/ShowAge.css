@@ -7,3 +7,15 @@
      font-style: italic;
      font-weight: 800;
 }
+
+@media screen and (max-width: 375px) {
+     .showingContainer{
+          font-size: 30px;
+     }
+   }
+
+   @media screen and (min-width: 376px) and (max-width: 830px){
+     .showingContainer{
+          font-size: 60px;
+     }
+}
