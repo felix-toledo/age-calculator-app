@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './MyBirthday.css'
+import arrow from '../public/assets/icon-arrow.svg'
 
 export default function MyBirthday({isInFuture, calculate}){
 
@@ -55,8 +56,11 @@ export default function MyBirthday({isInFuture, calculate}){
                     <input onChange={inputChange} className={isInFuture || !validYear ? 'errorInput' : null} id="year"  placeholder='YYYY'></input>
                     {isInFuture || !validYear ? <span className='advise adviseDate'>Must be in the past.</span> : null}
                </div>
-               
-               <button className="calculateButton" onClick={updateDate}>Calculate</button >
+          </div>
+
+          <div className='separator'>
+               <div className='line'></div>
+               <button className="calculateButton" onClick={updateDate}><img src={arrow} alt='arrow'/></button >
           </div>
     </>
      )
